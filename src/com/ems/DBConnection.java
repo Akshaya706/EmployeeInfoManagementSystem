@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-
+/**person1 */
 /**
  * Manages the MySQL JDBC connection for the Employee Information Management System.
  * 
