@@ -9,7 +9,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.plaf.basic.BasicButtonUI;
-
+//p3
 /**
  * Main application window — top-navbar layout inspired by modern hotel/SaaS dashboards.
  * - Row 1: Brand name, "Signed in as" label, DB Config + Sign Out buttons
