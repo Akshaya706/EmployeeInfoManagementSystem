@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
+import javax.swing.border.MatteBorder;//p2
 
 /**
  * Modern, enterprise-grade login window for the Employee Management System.
