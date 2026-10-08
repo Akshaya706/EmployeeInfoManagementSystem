@@ -7,9 +7,7 @@ Designed and engineered to satisfy the academic requirements for college-level J
 ---
 
 ## 📌 Problem Statement & Objectives
-
-> **College Problem Statement:**  
-> *"Develop an Employee Information Management System using Java and an appropriate GUI framework. The application should allow the user to add, view, search, modify, and delete employee information through the graphical interface. Appropriate GUI controls and event handling mechanisms should be used to perform the required operations. JDBC should be used to establish connectivity with a relational database and perform basic insert, retrieve, update, and delete operations on employee records."*
+*"Develop an Employee Information Management System using Java and an appropriate GUI framework. The application should allow the user to add, view, search, modify, and delete employee information through the graphical interface. Appropriate GUI controls and event handling mechanisms should be used to perform the required operations. JDBC should be used to establish connectivity with a relational database and perform basic insert, retrieve, update, and delete operations on employee records."*
 
 ---
 
@@ -132,104 +130,9 @@ EmployeeManagementSystem/
 ├── db.properties                       # Optional external configuration for DB credentials
 ├── run.bat                             # Windows batch script to compile & launch EMS
 └── README.md                           # Comprehensive documentation (this file)
-```
+``
 
 ---
-
-## 💾 Database Setup Instructions
-
-### 1. Open MySQL Command Line or MySQL Workbench
-Launch the **MySQL Command Line Client** or open **MySQL Workbench**.
-
-### 2. Execute `database.sql`
-Run the included SQL script located in the project root:
-
-**Option A — In MySQL Workbench:**
-1. Open MySQL Workbench and connect to your local MySQL instance.
-2. Go to **File -> Open SQL Script...** and select `database.sql`.
-3. Click the ⚡ **Execute** button (or press `Ctrl + Shift + Enter`).
-
-**Option B — In MySQL Command Prompt:**
-```bash
-mysql -u root -p < database.sql
-```
-
-### Table Schema:
-The script creates the database `employee_management` and table `employees`:
-
-```sql
-CREATE DATABASE IF NOT EXISTS employee_management;
-USE employee_management;
-
-CREATE TABLE IF NOT EXISTS employees (
-    employee_id VARCHAR(20) PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    department VARCHAR(50) NOT NULL,
-    designation VARCHAR(100) NOT NULL,
-    salary DECIMAL(10, 2) NOT NULL
-);
-```
-*(6 sample employee records across IT, HR, Finance, and Marketing are automatically populated for academic demonstration).*
-
----
-
-## 🔐 Database Credential Configuration
-
-You have **three flexible and safe options** to set your MySQL password without hardcoding secrets:
-
-### Option 1: Edit `db.properties` (Recommended)
-Edit the `db.properties` file in the project root directory:
-```properties
-db.url=jdbc:mysql://localhost:3306/employee_management?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-db.user=root
-db.password=YOUR_MYSQL_PASSWORD_HERE
-```
-
-### Option 2: From the Running GUI
-1. Launch the application.
-2. In the bottom-left corner of the sidebar, click the **⚙ DB Credentials** button.
-3. Enter your MySQL password and click **OK**.
-4. The application will test the connection and immediately refresh all tables.
-
-### Option 3: Modify `DBConnection.java`
-Open `src/com/ems/DBConnection.java` and adjust the default constants:
-```java
-private static final String DEFAULT_URL = "jdbc:mysql://localhost:3306/employee_management?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-private static final String DEFAULT_USER = "root";
-private static final String DEFAULT_PASSWORD = "YOUR_MYSQL_PASSWORD";
-```
-
----
-
-## 🚀 How to Compile and Run
-
-### Method 1: Using 1-Click Batch Script (Windows)
-Double-click `run.bat` (or open Command Prompt and execute):
-```cmd
-run.bat
-```
-
-### Method 2: Using PowerShell
-Run the included PowerShell script:
-```powershell
-.\run.ps1
-```
-
-### Method 3: Standard Terminal / Command Prompt Commands
-
-**Step 1: Compile the Java source files**
-```cmd
-mkdir bin
-javac -d bin -cp ".;lib/mysql-connector-j.jar" src/com/ems/*.java
-```
-
-**Step 2: Run the Application**
-```cmd
-java -cp "bin;lib/mysql-connector-j.jar" com.ems.Main
-```
-
----
-
 ## 🛡️ Input Validation & Error Handling
 
 | Scenario | Handled By | Behavior |
@@ -240,12 +143,3 @@ java -cp "bin;lib/mysql-connector-j.jar" com.ems.Main
 | **Non-numeric / Negative Salary** | `NumberFormatException` & logic | Rejects input; prompts for positive decimal |
 | **Duplicate Employee ID** | `EmployeeDAO.isEmployeeIdExists` | Prevents SQL primary key collision gracefully |
 | **Database Disconnection** | `SQLException` catch blocks | Displays visual diagnostic indicators without crashing |
-| **Record Deletion** | Confirmation dialog | Prompts confirmation before permanent removal |
-
----
-
-## 🔮 Future Improvements
-- User authentication and role-based access control (Admin vs. Standard Employee).
-- Export reports to PDF or Excel formats.
-- Profile picture attachment support using BLOB storage or file paths.
-- Dark / Light UI theme toggle.
