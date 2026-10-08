@@ -3,7 +3,7 @@ package com.ems;
 import java.awt.*;
 import java.text.DecimalFormat;
 import javax.swing.*;
-
+//b
 /**
  * A custom visual chart component rendered with Java2D antialiased graphics.
  * Displays horizontal department workforce distribution bars with percentage shares,

@@ -9,7 +9,7 @@ import javax.swing.*;
  * Used across the EMS application to create web-SaaS card containers.
  */
 public class RoundedPanel extends JPanel {
-
+//e
     private int cornerRadius;
     private Color backgroundColor;
     private Color borderColor;
