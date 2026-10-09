@@ -148,8 +148,7 @@ public class LoginFrame extends JFrame {
         panel.add(content, BorderLayout.NORTH);
 
         // Bottom version note
-        JLabel footer = new JLabel("Version 1.0
-         - Academic Release");
+        JLabel footer = new JLabel("Version 1.0 - Academic Release");
         footer.setFont(new Font(UIUtils.FONT_FAMILY, Font.PLAIN, 11));
         footer.setForeground(new Color(100, 116, 139));
         panel.add(footer, BorderLayout.SOUTH);
