@@ -76,7 +76,7 @@ public class UIUtils {
     public static final Font FONT_SMALL_BOLD   = new Font(FONT_FAMILY, Font.BOLD, 11);
     public static final Font FONT_TABLE_HEADER = new Font(FONT_FAMILY, Font.BOLD, 12);
 
-    private static final DecimalFormat CURRENCY_FORMAT = new DecimalFormat("$#,##0.00");
+    private static final DecimalFormat CURRENCY_FORMAT = new DecimalFormat("₹#,##0.00");
 
     private static String getSystemFontFamily() {
         String[] preferred = {"Segoe UI", "Inter", "Helvetica Neue", "Arial", "SansSerif"};

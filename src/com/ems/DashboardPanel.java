@@ -38,7 +38,7 @@ public class DashboardPanel extends JPanel {
     private JTable recentTable;
     private DefaultTableModel tableModel;
 
-    private static final DecimalFormat CURRENCY = new DecimalFormat("$#,##0.00");
+    private static final DecimalFormat CURRENCY = new DecimalFormat("₹#,##0.00");
     private static final DateTimeFormatter DT_FMT =
             DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy  •  HH:mm");
 

@@ -36,7 +36,7 @@ public class ReportPanel extends JPanel {
     private JLabel lblCostPerHead;
     private JLabel lblAuditTimestamp;
 
-    private static final DecimalFormat CURRENCY = new DecimalFormat("$#,##0.00");
+    private static final DecimalFormat CURRENCY = new DecimalFormat("₹#,##0.00");
     private static final DecimalFormat PERCENT = new DecimalFormat("0.0%");
     private static final SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("MMM dd, yyyy • HH:mm:ss");
 
