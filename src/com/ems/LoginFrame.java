@@ -134,11 +134,6 @@ public class LoginFrame extends JFrame {
         features.setLayout(new BoxLayout(features, BoxLayout.Y_AXIS));
         features.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        features.add(createFeatureItem("Real-time workforce & salary analytics"));
-        features.add(Box.createVerticalStrut(8));
-        features.add(createFeatureItem("CRUD staff management & search"));
-        features.add(Box.createVerticalStrut(8));
-        features.add(createFeatureItem("Secure JDBC database persistence"));
 
         content.add(pill);
         content.add(Box.createVerticalStrut(16));
@@ -153,7 +148,8 @@ public class LoginFrame extends JFrame {
         panel.add(content, BorderLayout.NORTH);
 
         // Bottom version note
-        JLabel footer = new JLabel("Version 2.4 - Academic Release");
+        JLabel footer = new JLabel("Version 1.0
+         - Academic Release");
         footer.setFont(new Font(UIUtils.FONT_FAMILY, Font.PLAIN, 11));
         footer.setForeground(new Color(100, 116, 139));
         panel.add(footer, BorderLayout.SOUTH);
