@@ -14,7 +14,7 @@ public class Employee {
     private String designation;
     private double salary;
 
-    private static final DecimalFormat CURRENCY_FORMAT = new DecimalFormat("$#,##0.00");
+    private static final DecimalFormat CURRENCY_FORMAT = new DecimalFormat("₹#,##0.00");
 
     // Default constructor
     public Employee() {

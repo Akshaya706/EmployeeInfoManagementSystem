@@ -44,7 +44,7 @@ public class DepartmentPanel extends JPanel {
     private DefaultTableModel deptEmployeesTableModel;
     private JLabel lblSelectedDept;
 
-    private static final DecimalFormat CURRENCY = new DecimalFormat("$#,##0.00");
+    private static final DecimalFormat CURRENCY = new DecimalFormat("₹#,##0.00");
     private static final DecimalFormat PERCENT = new DecimalFormat("0.0%");
 
     public DepartmentPanel(EmployeeDAO dao, MainFrame parentFrame) {
